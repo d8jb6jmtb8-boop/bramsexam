@@ -1,0 +1,2140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Brams Exam | Deutsch B1 Prüfungstraining</title>
+
+<meta name="description"
+content="Bereite dich mit Brams Exam auf die Deutschprüfung B1 vor. Trainiere Lesen, Hören, Sprachbausteine, Schreiben und Sprechen.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #f5f7fb;
+  --white: #ffffff;
+  --navy: #172554;
+  --primary: #4f46e5;
+  --primary-light: #eef2ff;
+  --green: #059669;
+  --red: #dc2626;
+  --text: #172033;
+  --muted: #718096;
+  --border: #e4e8f0;
+  --radius: 16px;
+  --shadow: 0 8px 28px rgba(23,37,84,.06);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: .5;
+}
+
+header {
+  height: 75px;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.header-inner {
+  width: min(1240px, 94%);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  background: var(--primary);
+  color: white;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  font-size: 1.1rem;
+}
+
+.brand small {
+  display: block;
+  font-size: .67rem;
+  color: var(--muted);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.level-badge {
+  background: var(--primary-light);
+  color: var(--primary);
+  padding: 8px 13px;
+  border-radius: 9px;
+  font-size: .85rem;
+  font-weight: 800;
+}
+
+.layout {
+  width: min(1240px, 94%);
+  margin: 30px auto 60px;
+  display: grid;
+  grid-template-columns: 255px minmax(0, 1fr);
+  gap: 25px;
+  align-items: start;
+}
+
+.sidebar {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  position: sticky;
+  top: 95px;
+}
+
+.side-title {
+  font-size: .72rem;
+  letter-spacing: 1.5px;
+  color: var(--muted);
+  font-weight: 800;
+  margin: 8px 0 14px;
+}
+
+.module-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 13px 12px;
+  margin-bottom: 5px;
+  border-radius: 12px;
+  text-align: left;
+  color: #596579;
+  font-weight: 600;
+}
+
+.module-button:hover {
+  background: #f7f8fc;
+}
+
+.module-button.active {
+  color: var(--primary);
+  background: var(--primary-light);
+}
+
+.module-icon {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  background: #f3f5f9;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+
+.module-button.active .module-icon {
+  background: white;
+}
+
+.module-name {
+  flex: 1;
+}
+
+.module-score {
+  font-size: .75rem;
+  color: var(--muted);
+}
+
+.progress-box {
+  border-top: 1px solid var(--border);
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.progress-heading {
+  display: flex;
+  justify-content: space-between;
+  font-size: .85rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.progress-track {
+  height: 8px;
+  background: #edf0f6;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #4f46e5, #818cf8);
+  border-radius: 20px;
+  transition: width .3s;
+}
+
+.main {
+  min-width: 0;
+}
+
+.welcome {
+  padding: 32px;
+  border-radius: 20px;
+  background: linear-gradient(120deg, #202f73, #4f46e5);
+  color: white;
+  margin-bottom: 23px;
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome:after {
+  content: "B1";
+  position: absolute;
+  right: 25px;
+  top: 0;
+  font-size: 9rem;
+  font-weight: 800;
+  opacity: .08;
+  line-height: 1.3;
+}
+
+.eyebrow {
+  font-size: .75rem;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  opacity: .8;
+  margin-bottom: 10px;
+}
+
+.welcome h1 {
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  line-height: 1.2;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.welcome p {
+  max-width: 650px;
+  color: #e0e7ff;
+  font-size: .94rem;
+  position: relative;
+  z-index: 1;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.stat-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.stat-label {
+  font-size: .8rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.stat-sub {
+  color: var(--muted);
+  font-size: .75rem;
+  margin-top: 4px;
+}
+
+.panel {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 26px;
+  margin-bottom: 22px;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.panel-header h2 {
+  font-size: 1.3rem;
+  color: var(--navy);
+}
+
+.panel-header p {
+  color: var(--muted);
+  font-size: .86rem;
+  margin-top: 4px;
+}
+
+.timer {
+  min-width: 105px;
+  padding: 12px 15px;
+  border-radius: 12px;
+  background: var(--primary-light);
+  color: var(--primary);
+  text-align: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.timer.danger {
+  color: var(--red);
+  background: #fef2f2;
+}
+
+.task-progress {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: .82rem;
+  margin-bottom: 10px;
+}
+
+.task-progress .progress-track {
+  flex: 1;
+  margin: 7px 15px;
+}
+
+.question-card {
+  border: 1px solid var(--border);
+  padding: 23px;
+  border-radius: 14px;
+  margin-bottom: 17px;
+}
+
+.question-number {
+  color: var(--primary);
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 9px;
+}
+
+.question-card h3 {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+.reading-text {
+  padding: 18px;
+  background: #f8faff;
+  border: 1px solid #e8edfa;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  font-size: .94rem;
+}
+
+.reading-text strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--navy);
+}
+
+.options {
+  display: grid;
+  gap: 10px;
+}
+
+.option {
+  display: flex;
+  gap: 11px;
+  align-items: flex-start;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  cursor: pointer;
+  transition: .15s;
+}
+
+.option:hover {
+  border-color: #a5b4fc;
+  background: #fafaff;
+}
+
+.option input {
+  margin-top: 5px;
+  accent-color: var(--primary);
+}
+
+.option.correct {
+  border-color: #10b981;
+  background: #ecfdf5;
+}
+
+.option.incorrect {
+  border-color: #f87171;
+  background: #fef2f2;
+}
+
+.feedback {
+  display: none;
+  border-radius: 10px;
+  padding: 13px 15px;
+  margin-top: 13px;
+  font-size: .88rem;
+}
+
+.feedback.show {
+  display: block;
+}
+
+.feedback.good {
+  color: #065f46;
+  background: #ecfdf5;
+}
+
+.feedback.bad {
+  color: #991b1b;
+  background: #fef2f2;
+}
+
+.action-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+
+.btn {
+  padding: 12px 18px;
+  border-radius: 11px;
+  border: 1px solid var(--border);
+  background: white;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.btn-primary {
+  color: white;
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background: #4338ca;
+}
+
+.btn-light {
+  background: #f8faff;
+}
+
+.result-box {
+  display: none;
+  text-align: center;
+  padding: 28px;
+  background: #f8faff;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+.result-box.show {
+  display: block;
+}
+
+.result-circle {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 15px;
+  display: grid;
+  place-items: center;
+  background: white;
+  border: 6px solid #c7d2fe;
+  color: var(--primary);
+  border-radius: 50%;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.result-box h3 {
+  margin-bottom: 8px;
+}
+
+.result-box p {
+  color: var(--muted);
+  margin-bottom: 15px;
+}
+
+.writing-area {
+  width: 100%;
+  min-height: 240px;
+  resize: vertical;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 17px;
+  outline: none;
+  font-size: .96rem;
+  line-height: 1.8;
+}
+
+.writing-area:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px #eef2ff;
+}
+
+.word-count {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: .8rem;
+  margin: 10px 0 15px;
+}
+
+.writing-feedback {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  background: #f8faff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.writing-feedback.show {
+  display: block;
+}
+
+.writing-feedback li {
+  margin: 8px 0 8px 20px;
+}
+
+.audio-box {
+  background: #f8faff;
+  border: 1px solid #e4e8f8;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 20px;
+}
+
+.audio-box p {
+  color: var(--muted);
+  font-size: .9rem;
+  margin-bottom: 15px;
+}
+
+.speaking-topic {
+  background: #f8faff;
+  padding: 22px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  margin-bottom: 18px;
+}
+
+.speaking-topic h3 {
+  margin-bottom: 10px;
+}
+
+.speaking-topic p {
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.speaking-questions {
+  padding-left: 20px;
+}
+
+.speaking-questions li {
+  margin: 7px 0;
+}
+
+.recording-status {
+  color: var(--muted);
+  font-size: .85rem;
+  margin-top: 12px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: .8rem;
+  padding: 30px 15px;
+  border-top: 1px solid var(--border);
+  background: white;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #172554;
+  color: white;
+  padding: 13px 20px;
+  border-radius: 12px;
+  z-index: 100;
+  display: none;
+  max-width: 90%;
+}
+
+.toast.show {
+  display: block;
+}
+
+@media(max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+  }
+
+  .module-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+
+  .progress-box {
+    margin-top: 10px;
+  }
+}
+
+@media(max-width: 600px) {
+  .header-inner {
+    width: 92%;
+  }
+
+  .layout {
+    width: 92%;
+    margin-top: 18px;
+  }
+
+  .welcome {
+    padding: 25px 20px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 15px;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .panel {
+    padding: 17px;
+  }
+
+  .panel-header {
+    align-items: flex-start;
+  }
+
+  .timer {
+    min-width: 85px;
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .module-list {
+    grid-template-columns: 1fr;
+  }
+
+  .question-card {
+    padding: 16px;
+  }
+
+  .header-right {
+    gap: 5px;
+  }
+
+  .brand {
+    font-size: 1rem;
+  }
+
+  .brand-icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="brand" href="#">
+      <span class="brand-icon">B</span>
+      <span>
+        BRAMS EXAM
+        <small>DEUTSCH PRÜFUNGSTRAINING</small>
+      </span>
+    </a>
+
+    <div class="header-right">
+      <span class="level-badge">NIVEAU B1</span>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="side-title">LERNBEREICHE</div>
+
+    <div class="module-list">
+
+      <button class="module-button active" data-module="dashboard">
+        <span class="module-icon">🏠</span>
+        <span class="module-name">Übersicht</span>
+      </button>
+
+      <button class="module-button" data-module="lesen">
+        <span class="module-icon">📖</span>
+        <span class="module-name">Lesen</span>
+        <span class="module-score" id="score-lesen">—</span>
+      </button>
+
+      <button class="module-button" data-module="sprachbausteine">
+        <span class="module-icon">🧩</span>
+        <span class="module-name">Sprachbausteine</span>
+        <span class="module-score" id="score-sprachbausteine">—</span>
+      </button>
+
+      <button class="module-button" data-module="hoeren">
+        <span class="module-icon">🎧</span>
+        <span class="module-name">Hören</span>
+        <span class="module-score" id="score-hoeren">—</span>
+      </button>
+
+      <button class="module-button" data-module="schreiben">
+        <span class="module-icon">✍️</span>
+        <span class="module-name">Schreiben</span>
+        <span class="module-score" id="score-schreiben">—</span>
+      </button>
+
+      <button class="module-button" data-module="sprechen">
+        <span class="module-icon">🗣️</span>
+        <span class="module-name">Sprechen</span>
+        <span class="module-score" id="score-sprechen">—</span>
+      </button>
+
+    </div>
+
+    <div class="progress-box">
+      <div class="progress-heading">
+        <span>Dein Fortschritt</span>
+        <span id="progressPercent">0%</span>
+      </div>
+
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <p style="font-size:.76rem;color:var(--muted);margin-top:10px;">
+        Übe regelmäßig und verbessere deine Ergebnisse.
+      </p>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <!-- DASHBOARD -->
+
+    <section id="dashboard" class="view">
+
+      <div class="welcome">
+        <div class="eyebrow">WILLKOMMEN BEI BRAMS EXAM</div>
+
+        <h1>Bereit für deine<br>Deutschprüfung B1?</h1>
+
+        <p>
+          Trainiere die wichtigsten Prüfungsbereiche, arbeite mit
+          Zeitlimits und überprüfe deine Antworten direkt.
+          Dein Weg zum B1-Zertifikat beginnt hier.
+        </p>
+      </div>
+
+      <div class="stats">
+
+        <div class="stat-card">
+          <div class="stat-label">Abgeschlossene Module</div>
+          <div class="stat-number" id="completedStat">0/5</div>
+          <div class="stat-sub">Dein bisheriger Fortschritt</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-label">Beantwortete Fragen</div>
+          <div class="stat-number" id="answeredStat">0</div>
+          <div class="stat-sub">Über alle Übungen hinweg</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-label">Gesamtfortschritt</div>
+          <div class="stat-number" id="overallStat">0%</div>
+          <div class="stat-sub">Deine gespeicherten Ergebnisse</div>
+        </div>
+
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <div>
+            <h2>Deine Prüfungsmodule</h2>
+            <p>Wähle einen Bereich und beginne mit dem Training.</p>
+          </div>
+        </div>
+
+        <div class="module-list">
+
+          <button class="module-button" data-module="lesen">
+            <span class="module-icon">📖</span>
+            <span class="module-name">
+              Lesen
+              <small style="display:block;color:var(--muted);font-weight:400;">
+                Texte verstehen
+              </small>
+            </span>
+          </button>
+
+          <button class="module-button" data-module="sprachbausteine">
+            <span class="module-icon">🧩</span>
+            <span class="module-name">
+              Sprachbausteine
+              <small style="display:block;color:var(--muted);font-weight:400;">
+                Grammatik und Wortschatz
+              </small>
+            </span>
+          </button>
+
+          <button class="module-button" data-module="hoeren">
+            <span class="module-icon">🎧</span>
+            <span class="module-name">
+              Hören
+              <small style="display:block;color:var(--muted);font-weight:400;">
+                Hörverstehen üben
+              </small>
+            </span>
+          </button>
+
+          <button class="module-button" data-module="schreiben">
+            <span class="module-icon">✍️</span>
+            <span class="module-name">
+              Schreiben
+              <small style="display:block;color:var(--muted);font-weight:400;">
+                Einen Brief schreiben
+              </small>
+            </span>
+          </button>
+
+          <button class="module-button" data-module="sprechen">
+            <span class="module-icon">🗣️</span>
+            <span class="module-name">
+              Sprechen
+              <small style="display:block;color:var(--muted);font-weight:400;">
+                Mündlich trainieren
+              </small>
+            </span>
+          </button>
+
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2 style="margin-bottom:12px;">💡 Prüfungstipp</h2>
+        <p style="color:var(--muted);">
+          Lies die Aufgaben zuerst aufmerksam durch. Achte auf
+          Schlüsselwörter und überprüfe deine Antworten, bevor du
+          den Test abgibst. Beim Schreiben helfen dir klare Absätze
+          und passende Verbindungswörter wie „deshalb“, „obwohl“
+          und „außerdem“.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- LESEN -->
+
+    <section id="lesen" class="view hidden">
+
+      <div class="panel">
+        <div class="panel-header">
+          <div>
+            <h2>📖 Lesen – B1</h2>
+            <p>Lies den Text und wähle die richtigen Antworten.</p>
+          </div>
+          <div class="timer" id="timer-lesen">15:00</div>
+        </div>
+
+        <div class="task-progress">
+          <span>Übungsaufgaben</span>
+          <div class="progress-track">
+            <div class="progress-fill" id="bar-lesen"></div>
+          </div>
+          <span id="count-lesen">0/3</span>
+        </div>
+
+        <div id="questions-lesen"></div>
+
+        <div class="action-row">
+          <button class="btn btn-light" onclick="resetModule('lesen')">
+            Neu starten
+          </button>
+          <button class="btn btn-primary" onclick="submitModule('lesen')">
+            Antworten korrigieren
+          </button>
+        </div>
+
+        <div class="result-box" id="result-lesen"></div>
+      </div>
+
+    </section>
+
+    <!-- SPRACHBAUSTEINE -->
+
+    <section id="sprachbausteine" class="view hidden">
+
+      <div class="panel">
+        <div class="panel-header">
+          <div>
+            <h2>🧩 Sprachbausteine – B1</h2>
+            <p>Ergänze die Sätze mit der passenden Lösung.</p>
+          </div>
+          <div class="timer" id="timer-sprachbausteine">10:00</div>
+        </div>
+
+        <div class="task-progress">
+          <span>Grammatik und Wortschatz</span>
+          <div class="progress-track">
+            <div class="progress-fill" id="bar-sprachbausteine"></div>
+          </div>
+          <span id="count-sprachbausteine">0/5</span>
+        </div>
+
+        <div id="questions-sprachbausteine"></div>
+
+        <div class="action-row">
+          <button class="btn btn-light" onclick="resetModule('sprachbausteine')">
+            Neu starten
+          </button>
+          <button class="btn btn-primary" onclick="submitModule('sprachbausteine')">
+            Antworten korrigieren
+          </button>
+        </div>
+
+        <div class="result-box" id="result-sprachbausteine"></div>
+      </div>
+
+    </section>
+
+    <!-- HOEREN -->
+
+    <section id="hoeren" class="view hidden">
+
+      <div class="panel">
+        <div class="panel-header">
+          <div>
+            <h2>🎧 Hören – B1</h2>
+            <p>Höre den Text aufmerksam und beantworte die Fragen.</p>
+          </div>
+          <div class="timer" id="timer-hoeren">10:00</div>
+        </div>
+
+        <div class="audio-box">
+          <h3 style="margin-bottom:8px;">Hörtext: Ein neuer Arbeitsplatz</h3>
+
+          <p>
+            Spiele den Text ab und höre aufmerksam zu.
+            Du kannst ihn während der Übung erneut anhören.
+          </p>
+
+          <button class="btn btn-primary" onclick="playAudio()">
+            ▶ Text anhören
+          </button>
+
+          <button class="btn" onclick="stopAudio()">
+            ■ Stoppen
+          </button>
+
+          <p style="margin-top:14px;margin-bottom:0;">
+            Hinweis: Die Audiofunktion verwendet die deutsche
+            Sprachausgabe deines Browsers, sofern verfügbar.
+          </p>
+        </div>
+
+        <div class="task-progress">
+          <span>Hörverstehen</span>
+          <div class="progress-track">
+            <div class="progress-fill" id="bar-hoeren"></div>
+          </div>
+          <span id="count-hoeren">0/3</span>
+        </div>
+
+        <div id="questions-hoeren"></div>
+
+        <div class="action-row">
+          <button class="btn btn-light" onclick="resetModule('hoeren')">
+            Neu starten
+          </button>
+          <button class="btn btn-primary" onclick="submitModule('hoeren')">
+            Antworten korrigieren
+          </button>
+        </div>
+
+        <div class="result-box" id="result-hoeren"></div>
+      </div>
+
+    </section>
+
+    <!-- SCHREIBEN -->
+
+    <section id="schreiben" class="view hidden">
+
+      <div class="panel">
+        <div class="panel-header">
+          <div>
+            <h2>✍️ Schreiben – B1</h2>
+            <p>Schreibe eine E-Mail und überprüfe deinen Text.</p>
+          </div>
+          <div class="timer" id="timer-schreiben">30:00</div>
+        </div>
+
+        <div class="reading-text">
+          <strong>Aufgabe: Einladung zum Geburtstag</strong>
+
+          Dein Freund Lukas hat dich zu seiner Geburtstagsfeier
+          eingeladen. Leider kannst du nicht kommen.
+
+          <br><br>
+
+          Schreibe eine E-Mail an Lukas. Schreibe etwas zu diesen
+          drei Punkten:
+
+          <ul style="padding-left:22px;margin-top:10px;">
+            <li>Bedanke dich für die Einladung.</li>
+            <li>Erkläre, warum du nicht kommen kannst.</li>
+            <li>Schlage einen anderen Termin vor.</li>
+          </ul>
+
+          <br>
+
+          <strong>Empfehlung: 80–100 Wörter für diese Übung.</strong>
+        </div>
+
+        <textarea
+          id="writingText"
+          class="writing-area"
+          placeholder="Lieber Lukas,&#10;&#10;vielen Dank für deine Einladung ..."
+        ></textarea>
+
+        <div class="word-count">
+          <span id="wordCount">0 Wörter</span>
+          <span>Übung: 80–100 Wörter</span>
+        </div>
+
+        <div class="action-row">
+          <button class="btn btn-light" onclick="resetWriting()">
+            Text löschen
+          </button>
+
+          <button class="btn btn-primary" onclick="correctWriting()">
+            Text überprüfen
+          </button>
+        </div>
+
+        <div class="writing-feedback" id="writingFeedback"></div>
+
+      </div>
+
+      <div class="panel">
+        <h3 style="margin-bottom:10px;">Was ist wichtig?</h3>
+
+        <ul style="padding-left:22px;color:var(--muted);">
+          <li>Eine passende Anrede verwenden.</li>
+          <li>Alle drei Aufgabenpunkte behandeln.</li>
+          <li>Kurze, verständliche Sätze schreiben.</li>
+          <li>Auf Verbposition, Artikel und Satzzeichen achten.</li>
+          <li>Mit einer passenden Grußformel abschließen.</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- SPRECHEN -->
+
+    <section id="sprechen" class="view hidden">
+
+      <div class="panel">
+        <div class="panel-header">
+          <div>
+            <h2>🗣️ Sprechen – B1</h2>
+            <p>Trainiere deine mündliche Prüfung.</p>
+          </div>
+          <div class="timer" id="timer-sprechen">03:00</div>
+        </div>
+
+        <div class="speaking-topic">
+          <div class="eyebrow" style="color:var(--primary);">
+            TEIL 1 · GEMEINSAM ETWAS PLANEN
+          </div>
+
+          <h3>Ein gemeinsames Wochenende planen</h3>
+
+          <p>
+            Du möchtest mit einem Freund oder einer Freundin
+            am Wochenende etwas unternehmen. Plant gemeinsam
+            einen Ausflug.
+          </p>
+
+          <ul class="speaking-questions">
+            <li>Wohin möchtet ihr fahren?</li>
+            <li>Wann wollt ihr losfahren?</li>
+            <li>Wie kommt ihr dorthin?</li>
+            <li>Was möchtet ihr dort machen?</li>
+            <li>Wie viel Geld braucht ihr?</li>
+          </ul>
+        </div>
+
+        <div class="action-row">
+          <button class="btn btn-primary" onclick="startSpeakingTimer()">
+            ▶ Sprechtraining starten
+          </button>
+
+          <button class="btn" onclick="resetTimer('sprechen')">
+            Timer zurücksetzen
+          </button>
+        </div>
+
+        <hr style="border:0;border-top:1px solid var(--border);margin:25px 0;">
+
+        <h3 style="margin-bottom:10px;">Deine Antwort üben</h3>
+
+        <p style="color:var(--muted);font-size:.9rem;margin-bottom:15px;">
+          Sprich deine Antwort laut aus. Wenn dein Browser die
+          Spracherkennung unterstützt, kannst du deine Antwort
+          auch aufnehmen lassen.
+        </p>
+
+        <textarea
+          id="speakingText"
+          class="writing-area"
+          style="min-height:130px;"
+          placeholder="Am Wochenende könnten wir ..."
+        ></textarea>
+
+        <div class="action-row">
+          <button class="btn" onclick="startSpeechRecognition()">
+            🎙️ Spracheingabe starten
+          </button>
+
+          <button class="btn btn-primary" onclick="checkSpeaking()">
+            Antwort überprüfen
+          </button>
+        </div>
+
+        <div id="speakingFeedback" class="writing-feedback"></div>
+
+        <p id="recordingStatus" class="recording-status">
+          Keine Spracheingabe aktiv.
+        </p>
+
+      </div>
+
+      <div class="panel">
+        <h3 style="margin-bottom:12px;">Nützliche Redemittel</h3>
+
+        <div class="reading-text">
+          <strong>Vorschläge machen</strong>
+          Wir könnten ...<br>
+          Wie wäre es, wenn wir ...?<br>
+          Ich schlage vor, dass wir ...
+        </div>
+
+        <div class="reading-text">
+          <strong>Zustimmen</strong>
+          Das ist eine gute Idee.<br>
+          Damit bin ich einverstanden.<br>
+          Das finde ich auch.
+        </div>
+
+        <div class="reading-text">
+          <strong>Widersprechen und Alternativen anbieten</strong>
+          Ich bin mir nicht sicher.<br>
+          Vielleicht wäre es besser, wenn wir ...<br>
+          Was hältst du davon, wenn wir ...?
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <strong>BRAMS EXAM</strong> · Deutsch B1 Prüfungstraining
+  <br><br>
+  Unabhängige Lernplattform. Nicht mit telc gGmbH verbunden.
+  Die Übungen sind Lernmaterialien und keine offiziellen Prüfungsaufgaben.
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ==========================================
+   BRAMS EXAM — B1 TRAINING
+   ========================================== */
+
+const moduleInfo = {
+  lesen: {
+    title: "Lesen",
+    duration: 15 * 60
+  },
+  sprachbausteine: {
+    title: "Sprachbausteine",
+    duration: 10 * 60
+  },
+  hoeren: {
+    title: "Hören",
+    duration: 10 * 60
+  },
+  schreiben: {
+    title: "Schreiben",
+    duration: 30 * 60
+  },
+  sprechen: {
+    title: "Sprechen",
+    duration: 3 * 60
+  }
+};
+
+/* Originale Übungsfragen */
+
+const questions = {
+  lesen: [
+    {
+      text: "Lesen Sie die Nachricht.",
+      passage: "Hallo Anna, ich komme heute etwa 20 Minuten später zum Treffen, weil mein Zug Verspätung hat. Warte bitte im Café neben dem Bahnhof. Bis gleich! Max",
+      question: "Warum kommt Max später?",
+      options: [
+        "Er muss länger arbeiten.",
+        "Sein Zug hat Verspätung.",
+        "Er hat das Treffen vergessen."
+      ],
+      answer: 1,
+      explanation: "Max schreibt ausdrücklich, dass sein Zug Verspätung hat."
+    },
+    {
+      text: "Lesen Sie die Information.",
+      passage: "Die Stadtbibliothek bleibt am Montag wegen Renovierungsarbeiten geschlossen. Ab Dienstag gelten wieder die normalen Öffnungszeiten.",
+      question: "Wann ist die Bibliothek wieder geöffnet?",
+      options: [
+        "Am Montagmorgen.",
+        "Erst am nächsten Freitag.",
+        "Ab Dienstag."
+      ],
+      answer: 2,
+      explanation: "Die normalen Öffnungszeiten gelten ab Dienstag."
+    },
+    {
+      text: "Lesen Sie die E-Mail.",
+      passage: "Liebe Frau Klein, vielen Dank für Ihre Bewerbung. Wir möchten Sie gern zu einem persönlichen Gespräch am Donnerstag um 10 Uhr einladen. Bitte bestätigen Sie den Termin per E-Mail.",
+      question: "Was soll Frau Klein machen?",
+      options: [
+        "Den Termin bestätigen.",
+        "Eine neue Bewerbung schreiben.",
+        "Am Donnerstag eine Prüfung ablegen."
+      ],
+      answer: 0,
+      explanation: "Sie soll den vorgeschlagenen Gesprächstermin per E-Mail bestätigen."
+    }
+  ],
+
+  sprachbausteine: [
+    {
+      question: "Ich lerne Deutsch, ___ ich in Deutschland arbeiten möchte.",
+      options: ["weil", "obwohl", "deshalb"],
+      answer: 0,
+      explanation: "„Weil“ leitet einen Nebensatz ein. Das Verb steht am Ende."
+    },
+    {
+      question: "Wenn ich mehr Zeit ___, würde ich öfter Sport machen.",
+      options: ["habe", "hätte", "hatte"],
+      answer: 1,
+      explanation: "Für einen irrealen Wunsch oder eine hypothetische Situation verwendet man hier „hätte“."
+    },
+    {
+      question: "Gestern ___ ich meine Freundin im Bahnhof getroffen.",
+      options: ["bin", "habe", "werde"],
+      answer: 1,
+      explanation: "„Treffen“ bildet das Perfekt normalerweise mit „haben“."
+    },
+    {
+      question: "Ich interessiere mich ___ Musik und Kultur.",
+      options: ["für", "an", "über"],
+      answer: 0,
+      explanation: "Die feste Verbindung lautet „sich interessieren für“."
+    },
+    {
+      question: "Obwohl es stark regnete, ___ wir spazieren gegangen.",
+      options: ["haben", "sind", "werden"],
+      answer: 1,
+      explanation: "„Gehen“ bildet das Perfekt mit „sein“: Wir sind gegangen."
+    }
+  ],
+
+  hoeren: [
+    {
+      question: "Warum hat die Sprecherin eine neue Arbeit gesucht?",
+      options: [
+        "Sie wollte näher bei ihrer Familie arbeiten.",
+        "Sie wollte in den Urlaub fahren.",
+        "Sie wollte nicht mehr Deutsch lernen."
+      ],
+      answer: 0,
+      explanation: "Sie hat eine Stelle in der Nähe ihrer Familie gesucht."
+    },
+    {
+      question: "Wie hat sie die neue Stelle gefunden?",
+      options: [
+        "Durch einen Freund im Ausland.",
+        "Durch eine Anzeige im Internet.",
+        "Durch eine Anzeige in der Zeitung."
+      ],
+      answer: 1,
+      explanation: "Sie hat die Stellenanzeige im Internet gefunden."
+    },
+    {
+      question: "Wann beginnt sie normalerweise mit der Arbeit?",
+      options: [
+        "Um sieben Uhr.",
+        "Um neun Uhr.",
+        "Um zehn Uhr."
+      ],
+      answer: 1,
+      explanation: "Im Hörtext sagt sie, dass ihr Arbeitstag um neun Uhr beginnt."
+    }
+  ]
+};
+
+const listeningText =
+"Seit zwei Monaten arbeite ich in einer neuen Firma. " +
+"Früher musste ich jeden Tag eine Stunde mit dem Bus fahren. " +
+"Deshalb habe ich nach einer Stelle in der Nähe meiner Familie gesucht. " +
+"Die neue Arbeit habe ich durch eine Anzeige im Internet gefunden. " +
+"Meine Kollegen sind sehr freundlich und helfen mir oft. " +
+"Normalerweise beginnt mein Arbeitstag um neun Uhr. " +
+"Ich bin froh, dass ich diese Stelle gefunden habe.";
+
+/* État et sauvegarde */
+
+let answers = {};
+let submitted = {};
+let timers = {};
+let remaining = {};
+let activeIntervals = {};
+let currentModule = "dashboard";
+let speechRecognition = null;
+
+const STORAGE_KEY = "brams_exam_b1_progress_v1";
+
+let savedProgress = {};
+
+try {
+  savedProgress = JSON.parse(
+    localStorage.getItem(STORAGE_KEY) || "{}"
+  );
+} catch {
+  savedProgress = {};
+}
+
+function saveProgress() {
+  localStorage.setItem(
+    STORAGE_KEY,
+    JSON.stringify(savedProgress)
+  );
+
+  updateDashboard();
+}
+
+function notify(message) {
+  const toast = document.getElementById("toast");
+
+  toast.textContent = message;
+  toast.classList.add("show");
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2800);
+}
+
+/* Navigation */
+
+function showModule(moduleId) {
+  if (currentModule !== "dashboard") {
+    stopTimer(currentModule);
+  }
+
+  currentModule = moduleId;
+
+  document.querySelectorAll(".view").forEach(section => {
+    section.classList.add("hidden");
+  });
+
+  const target = document.getElementById(moduleId);
+
+  if (target) {
+    target.classList.remove("hidden");
+  }
+
+  document.querySelectorAll("[data-module]").forEach(button => {
+    button.classList.toggle(
+      "active",
+      button.dataset.module === moduleId
+    );
+  });
+
+  if (moduleInfo[moduleId]) {
+    initializeTimer(moduleId);
+  }
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+document.querySelectorAll("[data-module]").forEach(button => {
+  button.addEventListener("click", () => {
+    showModule(button.dataset.module);
+  });
+});
+
+/* Génération des questions */
+
+function renderQuestions(moduleId) {
+  const container = document.getElementById(
+    "questions-" + moduleId
+  );
+
+  if (!container) return;
+
+  container.innerHTML = questions[moduleId].map((q, index) => {
+    const chosen = answers[moduleId]?.[index];
+
+    const passage = q.passage
+      ? `<div class="reading-text">
+           <strong>${q.text}</strong>
+           ${q.passage}
+         </div>`
+      : "";
+
+    const options = q.options.map((option, optionIndex) => `
+      <label class="option" id="option-${moduleId}-${index}-${optionIndex}">
+        <input
+          type="radio"
+          name="${moduleId}-${index}"
+          value="${optionIndex}"
+          ${chosen === optionIndex ? "checked" : ""}
+          ${submitted[moduleId] ? "disabled" : ""}
+        >
+        <span>${String.fromCharCode(65 + optionIndex)}. ${option}</span>
+      </label>
+    `).join("");
+
+    return `
+      <article class="question-card">
+        <div class="question-number">
+          FRAGE ${index + 1}
+        </div>
+
+        ${passage}
+
+        <h3>${q.question}</h3>
+
+        <div class="options">${options}</div>
+
+        <div
+          class="feedback ${submitted[moduleId] ? "show" : ""} ${
+            submitted[moduleId]
+              ? chosen === q.answer ? "good" : "bad"
+              : ""
+          }"
+          id="feedback-${moduleId}-${index}"
+        >
+          ${
+            submitted[moduleId]
+              ? (chosen === q.answer
+                  ? "✓ Richtig! "
+                  : "✗ Nicht richtig. ")
+                + q.explanation
+              : ""
+          }
+        </div>
+      </article>
+    `;
+  }).join("");
+
+  updateQuestionProgress(moduleId);
+}
+
+function updateQuestionProgress(moduleId) {
+  const total = questions[moduleId].length;
+  const answeredCount = Object.keys(
+    answers[moduleId] || {}
+  ).length;
+
+  const count = document.getElementById(
+    "count-" + moduleId
+  );
+
+  const bar = document.getElementById(
+    "bar-" + moduleId
+  );
+
+  if (count) {
+    count.textContent = answeredCount + "/" + total;
+  }
+
+  if (bar) {
+    bar.style.width = (answeredCount / total * 100) + "%";
+  }
+}
+
+["lesen", "sprachbausteine", "hoeren"].forEach(moduleId => {
+  answers[moduleId] = savedProgress[moduleId]?.answers || {};
+  submitted[moduleId] = false;
+  renderQuestions(moduleId);
+});
+
+document.addEventListener("change", event => {
+  const input = event.target;
+
+  if (
+    input.tagName !== "INPUT" ||
+    input.type !== "radio"
+  ) {
+    return;
+  }
+
+  const parts = input.name.split("-");
+
+  if (parts.length < 2) return;
+
+  const moduleId = parts.slice(0, -1).join("-");
+  const questionIndex = Number(parts[parts.length - 1]);
+
+  if (!questions[moduleId] || submitted[moduleId]) return;
+
+  if (!answers[moduleId]) answers[moduleId] = {};
+
+  answers[moduleId][questionIndex] = Number(input.value);
+
+  updateQuestionProgress(moduleId);
+});
+
+/* Correction immédiate */
+
+function submitModule(moduleId) {
+  if (submitted[moduleId]) {
+    notify("Dieser Test wurde bereits korrigiert. Starte ihn neu, um erneut zu üben.");
+    return;
+  }
+
+  const total = questions[moduleId].length;
+  const answeredCount = Object.keys(
+    answers[moduleId] || {}
+  ).length;
+
+  if (answeredCount < total) {
+    if (!confirm(
+      "Du hast nicht alle Fragen beantwortet. Möchtest du trotzdem korrigieren?"
+    )) {
+      return;
+    }
+  }
+
+  submitted[moduleId] = true;
+
+  let correct = 0;
+
+  questions[moduleId].forEach((q, index) => {
+    const chosen = answers[moduleId]?.[index];
+    const isCorrect = chosen === q.answer;
+
+    if (isCorrect) correct++;
+
+    q.options.forEach((option, optionIndex) => {
+      const element = document.getElementById(
+        `option-${moduleId}-${index}-${optionIndex}`
+      );
+
+      if (!element) return;
+
+      element.classList.remove("correct", "incorrect");
+
+      if (optionIndex === q.answer) {
+        element.classList.add("correct");
+      }
+
+      if (
+        chosen === optionIndex &&
+        optionIndex !== q.answer
+      ) {
+        element.classList.add("incorrect");
+      }
+    });
+
+    const feedback = document.getElementById(
+      `feedback-${moduleId}-${index}`
+    );
+
+    feedback.className =
+      "feedback show " + (isCorrect ? "good" : "bad");
+
+    feedback.textContent =
+      (isCorrect ? "✓ Richtig! " : "✗ Falsch. ") +
+      q.explanation;
+  });
+
+  stopTimer(moduleId);
+
+  const percentage = Math.round(correct / total * 100);
+
+  savedProgress[moduleId] = {
+    answers: answers[moduleId],
+    correct: correct,
+    total: total,
+    percentage: percentage,
+    completed: true
+  };
+
+  saveProgress();
+
+  const result = document.getElementById(
+    "result-" + moduleId
+  );
+
+  result.classList.add("show");
+
+  result.innerHTML = `
+    <div class="result-circle">${percentage}%</div>
+    <h3>${percentage >= 60 ? "Gut gemacht!" : "Weiter üben!"}</h3>
+    <p>
+      Du hast ${correct} von ${total} Fragen richtig beantwortet.
+    </p>
+    <button class="btn btn-primary"
+      onclick="resetModule('${moduleId}')">
+      Noch einmal üben
+    </button>
+  `;
+
+  renderQuestions(moduleId);
+  updateDashboard();
+
+  notify("Deine Antworten wurden korrigiert.");
+}
+
+/* Réinitialisation */
+
+function resetModule(moduleId) {
+  answers[moduleId] = {};
+  submitted[moduleId] = false;
+
+  delete savedProgress[moduleId];
+
+  const result = document.getElementById(
+    "result-" + moduleId
+  );
+
+  if (result) {
+    result.classList.remove("show");
+    result.innerHTML = "";
+  }
+
+  renderQuestions(moduleId);
+  initializeTimer(moduleId);
+  saveProgress();
+
+  notify("Der Test wurde zurückgesetzt.");
+}
+
+/* Chronomètres */
+
+function formatTime(seconds) {
+  const minutes = Math.floor(seconds / 60);
+  const remainder = seconds % 60;
+
+  return String(minutes).padStart(2, "0") + ":" +
+         String(remainder).padStart(2, "0");
+}
+
+function initializeTimer(moduleId) {
+  if (!moduleInfo[moduleId]) return;
+
+  if (remaining[moduleId] === undefined) {
+    remaining[moduleId] = moduleInfo[moduleId].duration;
+  }
+
+  updateTimerDisplay(moduleId);
+}
+
+function updateTimerDisplay(moduleId) {
+  const element = document.getElementById(
+    "timer-" + moduleId
+  );
+
+  if (!element) return;
+
+  element.textContent = formatTime(
+    Math.max(0, remaining[moduleId] || 0)
+  );
+
+  element.classList.toggle(
+    "danger",
+    remaining[moduleId] <= 60
+  );
+}
+
+function startTimer(moduleId) {
+  if (activeIntervals[moduleId]) return;
+
+  if (remaining[moduleId] <= 0) {
+    notify("Die Zeit ist abgelaufen. Setze den Timer zurück.");
+    return;
+  }
+
+  activeIntervals[moduleId] = setInterval(() => {
+    remaining[moduleId]--;
+
+    updateTimerDisplay(moduleId);
+
+    if (remaining[moduleId] <= 0) {
+      stopTimer(moduleId);
+      notify("Die Zeit ist abgelaufen!");
+
+      if (questions[moduleId] && !submitted[moduleId]) {
+        submitModule(moduleId);
+      }
+    }
+  }, 1000);
+}
+
+function stopTimer(moduleId) {
+  if (activeIntervals[moduleId]) {
+    clearInterval(activeIntervals[moduleId]);
+    delete activeIntervals[moduleId];
+  }
+}
+
+function resetTimer(moduleId) {
+  stopTimer(moduleId);
+
+  remaining[moduleId] = moduleInfo[moduleId].duration;
+
+  updateTimerDisplay(moduleId);
+
+  if (moduleId === "sprechen") {
+    notify("Der Timer wurde zurückgesetzt.");
+  }
+}
+
+/* Le chronomètre commence au premier choix ou au clic de démarrage. */
+
+document.addEventListener("change", event => {
+  const input = event.target;
+
+  if (input.type !== "radio") return;
+
+  const moduleId = input.name.split("-").slice(0, -1).join("-");
+
+  if (moduleInfo[moduleId]) {
+    startTimer(moduleId);
+  }
+});
+
+function startSpeakingTimer() {
+  startTimer("sprechen");
+  notify("Das Sprechtraining hat begonnen.");
+}
+
+/* Hören : lecture audio du navigateur */
+
+function playAudio() {
+  if (!("speechSynthesis" in window)) {
+    notify("Dein Browser unterstützt die Sprachausgabe nicht.");
+    return;
+  }
+
+  stopAudio();
+
+  const utterance = new SpeechSynthesisUtterance(listeningText);
+
+  utterance.lang = "de-DE";
+  utterance.rate = 0.85;
+  utterance.pitch = 1;
+
+  window.speechSynthesis.speak(utterance);
+
+  startTimer("hoeren");
+}
+
+function stopAudio() {
+  if ("speechSynthesis" in window) {
+    window.speechSynthesis.cancel();
+  }
+}
+
+/* Schreiben : correction de base */
+
+const writingText = document.getElementById("writingText");
+
+writingText.addEventListener("input", () => {
+  const text = writingText.value.trim();
+
+  const words = text ? text.split(/\s+/).length : 0;
+
+  document.getElementById("wordCount").textContent =
+    words + (words === 1 ? " Wort" : " Wörter");
+});
+
+function correctWriting() {
+  const text = writingText.value.trim();
+
+  if (!text) {
+    notify("Bitte schreibe zuerst deine E-Mail.");
+    return;
+  }
+
+  stopTimer("schreiben");
+
+  const lower = text.toLowerCase();
+  const words = text.split(/\s+/).filter(Boolean).length;
+
+  const checks = [
+    {
+      label: "Anrede",
+      passed: /\b(lieber|liebe|hallo)\b/i.test(text),
+      tip: "Beginne mit einer passenden Anrede, zum Beispiel „Lieber Lukas,“."
+    },
+    {
+      label: "Dank",
+      passed: /dank|danke|bedank/i.test(lower),
+      tip: "Bedanke dich für die Einladung."
+    },
+    {
+      label: "Begründung",
+      passed: /weil|leider|deshalb|da ich|muss ich|kann ich/i.test(lower),
+      tip: "Erkläre, warum du nicht kommen kannst."
+    },
+    {
+      label: "Alternativtermin",
+      passed: /morgen|nächste woche|samstag|sonntag|ander(e|en|er) termin|treffen|vorschlag/i.test(lower),
+      tip: "Schlage einen anderen Termin oder ein Treffen vor."
+    },
+    {
+      label: "Grußformel",
+      passed: /viele grüße|liebe grüße|herzliche grüße|bis bald/i.test(lower),
+      tip: "Beende deine E-Mail mit einer passenden Grußformel."
+    }
+  ];
+
+  const passed = checks.filter(check => check.passed).length;
+
+  const feedback = document.getElementById("writingFeedback");
+
+  feedback.classList.add("show");
+
+  feedback.innerHTML = `
+    <h3>Erste Textanalyse</h3>
+    <p style="margin:10px 0;">
+      Erkannt: ${passed} von ${checks.length} wichtigen Elementen.
+    </p>
+
+    <p style="margin-bottom:12px;">
+      Wortzahl: ${words}. ${
+        words >= 80 && words <= 100
+          ? "Die Wortzahl liegt im empfohlenen Bereich."
+          : "Versuche, etwa 80–100 Wörter zu schreiben."
+      }
+    </p>
+
+    <ul>
+      ${checks.map(check => `
+        <li>
+          <strong>${check.passed ? "✓" : "○"} ${check.label}:</strong>
+          ${check.passed ? "Erkannt" : check.tip}
+        </li>
+      `).join("")}
+    </ul>
+
+    <p style="margin-top:15px;color:var(--muted);font-size:.85rem;">
+      Hinweis: Diese automatische Prüfung kontrolliert nur einige
+      Merkmale des Textes. Sie bewertet nicht zuverlässig die gesamte
+      Grammatik, Rechtschreibung oder telc-Bewertungskriterien.
+    </p>
+  `;
+
+  savedProgress.schreiben = {
+    completed: true,
+    percentage: Math.round(passed / checks.length * 100),
+    words: words
+  };
+
+  saveProgress();
+}
+
+function resetWriting() {
+  writingText.value = "";
+
+  document.getElementById("wordCount").textContent = "0 Wörter";
+
+  document.getElementById("writingFeedback")
+    .classList.remove("show");
+
+  resetTimer("schreiben");
+}
+
+/* Sprechen : reconnaissance vocale si disponible */
+
+function startSpeechRecognition() {
+  const Recognition =
+    window.SpeechRecognition ||
+    window.webkitSpeechRecognition;
+
+  if (!Recognition) {
+    notify("Die Spracheingabe wird von diesem Browser nicht unterstützt.");
+    return;
+  }
+
+  speechRecognition = new Recognition();
+
+  speechRecognition.lang = "de-DE";
+  speechRecognition.continuous = true;
+  speechRecognition.interimResults = true;
+
+  const status = document.getElementById("recordingStatus");
+  const textarea = document.getElementById("speakingText");
+
+  status.textContent = "Spracheingabe aktiv. Bitte sprich Deutsch.";
+
+  speechRecognition.onresult = event => {
+    let transcript = "";
+
+    for (let i = 0; i < event.results.length; i++) {
+      transcript += event.results[i][0].transcript + " ";
+    }
+
+    textarea.value = transcript.trim();
+  };
+
+  speechRecognition.onerror = () => {
+    status.textContent = "Die Spracheingabe wurde beendet oder es ist ein Fehler aufgetreten.";
+  };
+
+  speechRecognition.onend = () => {
+    status.textContent = "Spracheingabe beendet.";
+  };
+
+  try {
+    speechRecognition.start();
+    startSpeakingTimer();
+  } catch {
+    notify("Die Spracheingabe konnte nicht gestartet werden.");
+  }
+}
+
+function checkSpeaking() {
+  const text = document.getElementById("speakingText")
+    .value.trim();
+
+  if (!text) {
+    notify("Bitte gib zuerst deine Antwort ein oder nutze die Spracheingabe.");
+    return;
+  }
+
+  const lower = text.toLowerCase();
+
+  const checks = [
+    {
+      name: "Vorschlag",
+      pass: /könnten|wie wäre es|ich schlage vor|vielleicht/i.test(text)
+    },
+    {
+      name: "Zeit oder Termin",
+      pass: /samstag|sonntag|morgen|um \d|wochenende|uhr/i.test(lower)
+    },
+    {
+      name: "Ort oder Aktivität",
+      pass: /fahren|gehen|besuchen|ausflug|kino|park|museum|stadt/i.test(lower)
+    },
+    {
+      name: "Gemeinsame Planung",
+      pass: /wir|uns|gemeinsam|zusammen/i.test(lower)
+    }
+  ];
+
+  const total = checks.filter(check => check.pass).length;
+
+  const feedback = document.getElementById("speakingFeedback");
+
+  feedback.classList.add("show");
+
+  feedback.innerHTML = `
+    <h3>Deine Antwort – erste Rückmeldung</h3>
+
+    <p style="margin:10px 0;">
+      ${total} von ${checks.length} Kommunikationsmerkmalen erkannt.
+    </p>
+
+    <ul>
+      ${checks.map(check => `
+        <li>${check.pass ? "✓" : "○"} ${check.name}</li>
+      `).join("")}
+    </ul>
+
+    <p style="margin-top:14px;color:var(--muted);font-size:.85rem;">
+      Dies ist eine einfache Textanalyse und keine offizielle
+      Bewertung der mündlichen Prüfung. Aussprache, Grammatik
+      und Gesprächsführung werden hier nicht vollständig bewertet.
+    </p>
+  `;
+
+  savedProgress.sprechen = {
+    completed: true,
+    percentage: Math.round(total / checks.length * 100)
+  };
+
+  saveProgress();
+}
+
+/* Dashboard et statistiques */
+
+function updateDashboard() {
+  const moduleIds = [
+    "lesen",
+    "sprachbausteine",
+    "hoeren",
+    "schreiben",
+    "sprechen"
+  ];
+
+  const completed = moduleIds.filter(
+    id => savedProgress[id]?.completed
+  ).length;
+
+  let totalAnswered = 0;
+
+  ["lesen", "sprachbausteine", "hoeren"].forEach(id => {
+    totalAnswered += Object.keys(
+      savedProgress[id]?.answers || {}
+    ).length;
+  });
+
+  document.getElementById("completedStat").textContent =
+    completed + "/5";
+
+  document.getElementById("answeredStat").textContent =
+    totalAnswered;
+
+  const percentage = Math.round(completed / 5 * 100);
+
+  document.getElementById("overallStat").textContent =
+    percentage + "%";
+
+  document.getElementById("progressPercent").textContent =
+    percentage + "%";
+
+  document.getElementById("progressFill").style.width =
+    percentage + "%";
+
+  moduleIds.forEach(id => {
+    const scoreElement = document.getElementById("score-" + id);
+
+    if (!scoreElement) return;
+
+    if (savedProgress[id]?.completed) {
+      scoreElement.textContent =
+        savedProgress[id].percentage + "%";
+    } else {
+      scoreElement.textContent = "—";
+    }
+  });
+}
+
+/* Initialisation */
+
+Object.keys(moduleInfo).forEach(id => {
+  remaining[id] = moduleInfo[id].duration;
+  initializeTimer(id);
+});
+
+updateDashboard();
+</script>
+
+</body>
+</html>
